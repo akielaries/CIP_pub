@@ -3,7 +3,7 @@ Arizona University Internet of Things & School of Informatics,
 Computing, and Cyber Systems [DISCOVER CCRI research project](https://discoverccri.org/). 
 
 Authors
-[Akiel Aries](https://www.akielaries.github.io)
+[Akiel Aries](https://akielaries.github.io/)
 
 # Introduction
 This repository contains code that transmits values read 
