@@ -1,4 +1,4 @@
-Repository for Climate Indicator Project done for the Northern
+Repository for Climate Indicator Node done for the Northern
 Arizona University Internet of Things & School of Informatics,
 Computing, and Cyber Systems [DISCOVER CCRI research project](https://discoverccri.org/). 
 
@@ -7,11 +7,15 @@ Authors
 
 # Introduction
 This repository contains code that transmits values read 
-from these sensors :
+from these sensors with additional peripherals to be added:
 
 - BME280 Temperature Humidity Pressure Sensor
-- DS18B20 Liquid Sensor
-- SHT30 Temperature and Humidity sensor **(*redundant*)**
+- DS18B20 Liquid Sensor (can be used for measuring ground temp)
+- ~~SHT30 Temperature and Humidity sensor~~ **(*redundant*)**
+
+Additional peripherals will include :
+
+- CO2 & Air Quality Sensor (CCS811 CO2 & Air Qual)
 
 over MQTT through an ESP module located on a D1 Mini pro 
 dev board to a database hosted on an RPI 4.
