@@ -23,7 +23,7 @@ from the BME280 and displaying them both to Serial and
 an LCD attached. 
 
 #### D1Mini
-#####*(MQTT publish code currently decoupled from main())*
+##### *(MQTT publish code currently decoupled from main())*
 Folder contains a rough sketch on sending values read 
 from the BME280 and publishing the data through the ESP 
 module located on the D1 mini dev board via MQTT. The 
