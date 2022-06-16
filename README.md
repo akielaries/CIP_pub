@@ -1,5 +1,5 @@
 Repository for Climate Indicator Node done for the Northern
-Arizona University Internet of Things & School of Informatics,
+Arizona University Internet of Things team & School of Informatics,
 Computing, and Cyber Systems [DISCOVER CCRI research project](https://discoverccri.org/). 
 
 Authors
