@@ -55,7 +55,7 @@ implementation of the Python lib Pandas will be used which
 will also be used in the visual implementation stage...
 Final result will contain necessary peripherals on a
 Printed Circuit Board (PCB).
-##### ***if memory usuage becomes an issue in future implementations, utilization of ESP & AVR specific embedded C will be explored ***
+##### ***if memory usuage becomes an issue in future implementations, utilization of ESP & AVR specific embedded C will be explored***
 
 # Build 
 *Explain how to build this project. Want this to be
