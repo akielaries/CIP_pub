@@ -70,3 +70,12 @@ Clone the repository and build from the Dockerimage:
 
 # How to Contribute to this project...
 #### *Todo:*
+
+# Potential & Forseeable complications with future implementations
+- Using the D1 Mini Pro as a host MCU has its limits. To provide ideal
+power output we will want to couple the existing D1 Mini Pro code w/
+the ATMEGA2560 and daisy chain wifi capabilities from that or a bare
+ESP8266 module. 
+- Using the Arduino psuedo C/C++ code and lackluster IDE uses more memory
+than bare metal C alongside AVR-GCC compiler or ESP equivalent.
+
