@@ -44,7 +44,7 @@ to the raspberry pi that will store these values.
 
 #### End goal of this project
 Idea is to use the ATMEGA2560 as a host microcontroller 
-and utilize an ESP module (D1 Mini Pro, or bare ESP82066 
+and utilize an ESP module (D1 Mini Pro, or bare ESP8266 
 module) to give the MCU internet connectivity for publishing 
 values. The values will be published via MQTT and fed into 
 an instance of InfluxDB hosted on a RPI 4. The data can 
