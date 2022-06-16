@@ -17,9 +17,7 @@ InfluxDB hosted on an RPI 4 with additional peripherals to be added.
 Additional peripherals will include :
 
 - CO2 & Air Quality Sensor (CCS811 CO2 & Air Qual)
-
-over MQTT through an ESP module located on a D1 Mini pro 
-dev board to a database hosted on an RPI 4.
+- Host MCU & BME280 w/ STEMM QT soil sensor 
 
 ## Repo Details
 #### ATMEGA2560
