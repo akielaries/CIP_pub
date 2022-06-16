@@ -23,13 +23,19 @@ from the BME280 and displaying them both to Serial and
 an LCD attached. 
 
 #### D1Mini
+#####*(MQTT publish code currently decoupled from main())*
 Folder contains a rough sketch on sending values read 
 from the BME280 and publishing the data through the ESP 
 module located on the D1 mini dev board via MQTT. The 
 data is then sent into an instance of InfluxDB hosted on 
 a Raspberry Pi 4. 
 
+
 #### MQTT
+Folder contains rough sketch of how values will be
+transmitted from the host microcontroller(D1 Mini Pro)
+to the raspberry pi that will store these values. 
+
 
 #### Schematic Coming Soon...
 #### *Todo:*
