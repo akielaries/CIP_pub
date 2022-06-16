@@ -1,9 +1,9 @@
 Repository for Climate Indicator Node done for the Northern
 Arizona University Internet of Things team & School of Informatics,
-Computing, and Cyber Systems [DISCOVER CCRI research project](https://discoverccri.org/). 
+Computing, and Cyber Systems [DISCOVER CCRI research project](https://discoverccri.org/){:target="\_blank"}. 
 
 Authors
-[Akiel Aries](https://akielaries.github.io/)
+[Akiel Aries](https://akielaries.github.io/){:target="\_blank"}
 
 # Introduction
 This repository contains code that transmits values read 
