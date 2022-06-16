@@ -7,11 +7,12 @@ Authors
 
 # Introduction
 This repository contains code that transmits values read 
-from these sensors with additional peripherals to be added:
+from various sensors and published them via MQTT to an Instance of
+InfluxDB hosted on an RPI 4 with additional peripherals to be added.
 
-- BME280 Temperature Humidity Pressure Sensor
-- DS18B20 Liquid Sensor (can be used for measuring ground temp)
-- ~~SHT30 Temperature and Humidity sensor~~ **(*redundant*)**
+- BME280 Temp, Hum., Press. 
+- DS18B20 Liquid Sensor     (can be used for measuring ground temp)
+- ~~SHT30 Temp & Hum.~~     **(*redundant but maybe good for veryfing other peripheral readings*)**
 
 Additional peripherals will include :
 
@@ -33,7 +34,6 @@ from the BME280 and publishing the data through the ESP
 module located on the D1 mini dev board via MQTT. The 
 data is then sent into an instance of InfluxDB hosted on 
 a Raspberry Pi 4. 
-
 
 #### MQTT
 Folder contains rough sketch of how values will be
