@@ -1,3 +1,5 @@
+Repository for Climate Indicator Node done for the Northern Arizona University Internet of Things (IoT) team.
+
 Authors
 [Akiel Aries](https://www.github.com/aba275)
 
@@ -10,10 +12,12 @@ InfluxDB hosted on an RPI 4 with additional peripherals to be added.
 - BME280 Temp, Hum., Press.
 - DS18B20 Liquid Sensor     (can be used for measuring ground temp)
 - ~~SHT30 Temp & Hum.~~     **(*redundant but maybe good for veryfing other peripheral readings*)**
+    - Using SHT30 (x2) for testing communication over I2C vs SCI
 
 Additional peripherals will include :
 
 - CO2 & Air Quality Sensor (CCS811 CO2 & Air Qual)
+- Adafruit Anemometer 
 - Host MCU & BME280 w/ STEMM QT soil sensor
 
 ## Repo Details
@@ -37,23 +41,20 @@ to the raspberry pi that will store these values.
 
 
 #### Schematic 
-![CIP_schematic_v1](https://user-images.githubusercontent.com/56521583/174503290-b4ae63b7-09a6-4bef-abdc-76ad19847dcb.png)
+![CIP_schematic_v0 with KiCad](https://github.com/akielaries/CIP_pub/blob/main/img/KICAD_CIP_SCHEMATIC_V0.png)
 
 
 #### End goal of this project
-Idea is to use the ATMEGA2560 as a host microcontroller
-and utilize an ESP module (D1 Mini Pro, or bare ESP8266
-module) to give the MCU internet connectivity for publishing
-values. The values will be published via MQTT and fed into
-an instance of InfluxDB hosted on a RPI 4. The data can
-be visualized in a number of way (will likely go with
-grafana.) The mass amounts of readings sent into the DB
-are subject to statistical analysis in this case the
-implementation of the Python lib Pandas will be used which
-will also be used in the visual implementation stage...
-Final result will contain necessary peripherals on a
-Printed Circuit Board (PCB).
-##### ***if memory usuage becomes an issue in future implementations, utilization of ESP & AVR specific embedded C will be explored***
+Idea is to use the ATMEGA32U4 (W/ Atheros AR9331 chip) as a host 
+microcontroller connected to various peripherals to read and publishing values. 
+The values will be published via MQTT and fed into an instance of InfluxDB hosted 
+on a RPI 4. The data can be visualized in a number of way (will likely go with 
+grafana at first). The mass amounts of readings sent into the DB are subject to statistical analysis in 
+this case the implementation of the Python lib Pandas will be used, also for the visual implementation stage...
+Final result will contain necessary peripherals on a Printed Circuit Board (PCB).
+
+# Dependencies
+#### *Todo*
 
 # Build
 *Explain how to build this project. Want this to be
@@ -70,11 +71,13 @@ Clone the repository and build from the Dockerimage:
 #### *Todo:*
 
 ### Potential & Forseeable complications with future implementations
-- Using the D1 Mini Pro as a host MCU has its limits. To provide ideal
-power output we will want to couple the existing D1 Mini Pro code w/
-the ATMEGA2560 and daisy chain wifi capabilities from that or a bare
-ESP8266 module.
-- Using the Arduino psuedo C/C++ code and lackluster IDE uses more memory
+- Using the Arduino C/C++ code and lackluster IDE uses more memory
 than bare metal C alongside AVR-GCC compiler or ESP equivalent.
-
+- With recent discovery of Arduino Yun Rev 2 (ATMEGA32u4 chip alongside
+a Atheros AR9331 with ethernet & wireless capabilities) this could eliminate
+needing to use the underpowered D1 Mini Pro as a host device or needing to siphon off
+connections for wireless on more suitable device like the ATMEGA2560.
+    - will use the D1 as a voltage reader of the project and publish those values as a
+    seperate MQTT topic.
+- can use the beaglebone as a subscriber device to host values like the RPI 
 
